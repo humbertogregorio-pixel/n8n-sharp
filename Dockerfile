@@ -1,5 +1,6 @@
 FROM docker.n8n.io/n8nio/n8n
 
 USER root
-RUN cd /usr/local/lib/node_modules/n8n && npm install sharp
+RUN npm install -g sharp
+ENV NODE_PATH=/usr/local/lib/node_modules
 USER node
