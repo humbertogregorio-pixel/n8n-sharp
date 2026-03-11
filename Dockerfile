@@ -15,5 +15,6 @@ RUN mkdir -p /opt/custom \
  && cp -R /opt/custom/node_modules/@img /usr/local/lib/node_modules/n8n/node_modules/@img
 
 COPY n8n-task-runners.json /etc/n8n-task-runners.json
+COPY render.js /usr/local/bin/render.js
 
 USER node
